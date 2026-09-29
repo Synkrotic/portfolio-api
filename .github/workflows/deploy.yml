@@ -17,6 +17,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
+            export PNPM_HOME="$HOME/.local/share/pnpm"
+            export PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH"
+
             cd ${{ secrets.VPS_PROJECT_PATH }}
             git pull origin production
             pnpm install
