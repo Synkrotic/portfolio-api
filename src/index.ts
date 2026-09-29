@@ -53,7 +53,7 @@ async function getFiles(
   }
 }
 
-app.get("/api/newest//:program", async (req, res) => {
+app.get("/api/newest/:program", async (req, res) => {
   const { program } = req.params;
   try {
     const files = await getFiles("repositories", program);
