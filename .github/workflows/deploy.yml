@@ -21,3 +21,4 @@ jobs:
             git pull origin production
             pnpm install
             pnpm build
+            pm2 restart portfolio-api

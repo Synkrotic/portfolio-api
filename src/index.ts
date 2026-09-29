@@ -78,8 +78,8 @@ app.get("/api/newest/:program", async (req, res) => {
   }
 });
 
-app.get("/", async (_, res) => {
-  res.status(200).json({ test: "Succeeded!" });
+app.get("/api/", async (_, res) => {
+  res.status(200).json({ api: "Succeeded!" });
 });
 
 const PORT = 3001;
